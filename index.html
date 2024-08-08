@@ -27,9 +27,11 @@
             max-width: 800px; /* Set a maximum width for large screens */
         }
         .container img {
-            width: 100%; /* Make the logo fill the entire container */
-            height: auto;
+            max-width: 100%; /* Limit the image width to the container's width */
+            height: auto; /* Maintain aspect ratio */
             margin-bottom: 20px;
+            max-height: 400px; /* Add a max height to prevent the image from being too large */
+            object-fit: contain; /* Ensures the image fits within the given dimensions */
         }
         .container h1 {
             font-size: 3em;
