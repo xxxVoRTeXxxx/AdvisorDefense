@@ -16,6 +16,7 @@
             background-image: url('background.jpg'); /* Background image */
             background-size: cover; /* Ensure the background covers the whole page */
             background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent background image from repeating */
             color: #fff; /* Default text color set to white */
         }
         .container {
@@ -27,15 +28,13 @@
             max-width: 800px; /* Set a maximum width for large screens */
         }
         .container img {
-            max-width: 100%; /* Limit the image width to the container's width */
+            max-width: 100%; /* Ensure the image fits within the container */
             height: auto; /* Maintain aspect ratio */
             margin-bottom: 20px;
-            max-height: 400px; /* Add a max height to prevent the image from being too large */
-            object-fit: contain; /* Ensures the image fits within the given dimensions */
         }
         .container h1 {
             font-size: 3em;
-            color: #000; /* "Coming Soon" text color set to black */
+            color: #fff; /* Set "Coming Soon" text color to white for better contrast */
             margin-bottom: 20px;
         }
         .container p {
