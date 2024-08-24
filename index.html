@@ -28,6 +28,12 @@
         width: 80%; /* Make the container wider */
         max-width: 800px; /* Set a maximum width for large screens */ 
       }
+        .image-wrapper {
+            background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+            padding: 20px; /* Add some padding around the image */
+            display: inline-block; /* Make the div fit the content */
+            border-radius: 10px; /* Optional: Add rounded corners */
+        }
         .container img {
             max-width: 100%; /* Ensure the image fits within the container */
             height: auto; /* Maintain aspect ratio */
@@ -86,7 +92,9 @@
 <body>
 
 <div class="container">
-        <img src="full-removebg-preview.png" alt="AdvisorDefense Logo">
+    <div class="image-wrapper">
+    <img src="full-removebg-preview.png" alt="AdvisorDefense Logo">
+</div>
         <h1>Coming Soon</h1>
         <p>We're working on something great! Download our brochure below, connect with us on social media, and reach out to us via email!</p>
         <p class="email"> <a href="mailto:sales@advisordefense.com">sales@advisordefense.com</a></p>
