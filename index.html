@@ -20,31 +20,28 @@
             color: #fff; /* Default text color set to white */
         }
         .container {
-            position: relative;
+            position: relative; /* Ensure the container is relatively positioned */
             text-align: center;
             padding: 20px;
-            background-color: transparent;
+            background-color: transparent; /* Set to transparent */
             border-radius: 10px;
-            width: 80%;
-            max-width: 800px;
+            width: 80%; /* Make the container wider */
+            max-width: 800px; /* Set a maximum width for large screens */ 
         }
-        .video-wrapper {
-            margin: 20px 0;
-        }
-        .container video {
-            width: 100%; /* Make the video responsive */
-            max-width: 800px; /* Set maximum width */
-            border-radius: 10px;
-            outline: none;
+        .image-wrapper {
+            background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+            padding: 20px; /* Add some padding around the image */
+            display: inline-block; /* Make the div fit the content */
+            border-radius: 10px; /* Optional: Add rounded corners */
         }
         .container img {
-            max-width: 100%;
-            height: auto;
+            max-width: 100%; /* Ensure the image fits within the container */
+            height: auto; /* Maintain aspect ratio */
             margin-bottom: 20px;
         }
         .container h1 {
             font-size: 3em;
-            color: #fff;
+            color: #fff; /* Set "Coming Soon" text color to white for better contrast */
             margin-bottom: 20px;
         }
         .container p {
@@ -61,6 +58,60 @@
             display: inline-block;
             margin-top: 10px;
         }
+        .container a img {
+            width: 50px; /* Increase the size of the icons */
+            height: auto; /* Maintain aspect ratio */
+            vertical-align: middle; /* Align the image vertically with text, if any */
+            outline: none; /* Remove the blue focus box */
+            z-index: 100; /* Bring the icons to the front */
+            position: relative; /* Ensure the z-index takes effect */
+            background-color: rgba(255, 255, 255, 0.8); /* Add a light background color */
+            border-radius: 0; /* Remove the circular effect */
+            padding: 0; /* Add some padding around the icon */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow effect */
+            margin: 10px; /* Add space between icons */
+            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+        }
+        .container a img:hover {
+            transform: scale(1.1); /* Slightly enlarge the icon on hover */
+        }  
+        .container .email {
+            font-size: 1.2em;
+            margin-top: 20px;
+            color: #fff;
+        }
+        .container .pdf-link {
+            background-color: #000000; /* Black color for the PDF link button */
+            margin-top: 20px; /* Add space between the button and social links */
+        }
+        .container .pdf-link:hover {
+            background-color: #C73500; /* Darker color on hover */
+        }
+
+        /* Media Query for Mobile Devices */
+        @media (max-width: 600px) {
+            .container {
+                width: 90%; /* Increase container width to utilize more space on mobile */
+            }
+            .container h1 {
+                font-size: 2em; /* Slightly smaller heading for mobile */
+            }
+            .container p {
+                font-size: 1em; /* Smaller paragraph text for mobile */
+                margin-bottom: 15px;
+            }
+            .container a {
+                font-size: 0.9em; /* Adjust button text size for mobile */
+                padding: 8px 10px; /* Adjust button padding for mobile */
+            }
+            .container a img {
+                width: 35px; /* Smaller icon size on mobile */
+                margin: 5px; /* Adjust spacing for mobile */
+            }
+            .container .pdf-link {
+                padding: 8px 10px; /* Adjust button padding on mobile */
+            }
+        }
     </style>
 </head>
 <body>
@@ -71,15 +122,7 @@
     </div>
     <p>Download our brochure below to learn more about our offering and feel free to connect with us by email.</p>
     <p class="email"> <a href="mailto:sales@advisordefense.com">Sales@AdvisorDefense.com</a></p>
-    
-    <!-- Video Section -->
-    <div class="video-wrapper">
-        <video controls>
-            <source src="logo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-    
+        
     <!-- Social Media Icons -->
     <a href="https://www.linkedin.com/company/advisordefense/" target="_blank">
         <img src="linkedin.png" alt="LinkedIn">
