@@ -45,21 +45,13 @@
             font-size: 1.2em;
             margin-bottom: 30px;
         }
-        .container a {
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-size: 1.1em;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            display: inline-block;
-            margin-top: 10px;
-        }
         .container a img {
             width: 50px;
             height: auto;
             margin: 10px;
             transition: transform 0.3s ease;
+            border: 2px solid white; /* Add white border */
+            border-radius: 5px; /* Slightly rounded corners */
         }
         .container a img:hover {
             transform: scale(1.1);
@@ -70,11 +62,21 @@
             color: #fff;
         }
         .container .pdf-link {
-            background-color: #000000;
+            background-color: #000000; /* Black background */
+            color: white; /* White text */
+            border: 2px solid white; /* Add white border */
+            padding: 10px 20px; /* Padding for the button */
+            text-align: center;
+            display: inline-block;
             margin-top: 20px;
+            font-size: 1.1em; /* Adjust font size */
+            border-radius: 5px; /* Optional: Rounded corners */
+            text-decoration: none; /* Remove underline */
+            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
         }
         .container .pdf-link:hover {
-            background-color: #C73500;
+            background-color: white; /* Invert colors on hover */
+            color: black; /* Black text on hover */
         }
         @media (max-width: 600px) {
             .container {
