@@ -13,35 +13,35 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-image: url('background.jpg'); /* Background image */
-            background-size: cover; /* Ensure the background covers the whole page */
-            background-position: center; /* Center the background image */
-            background-repeat: no-repeat; /* Prevent background image from repeating */
-            color: #fff; /* Default text color set to white */
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
         }
         .container {
-            position: relative; /* Ensure the container is relatively positioned */
+            position: relative;
             text-align: center;
             padding: 20px;
-            background-color: transparent; /* Set to transparent */
+            background-color: transparent;
             border-radius: 10px;
-            width: 80%; /* Make the container wider */
-            max-width: 800px; /* Set a maximum width for large screens */ 
+            width: 80%;
+            max-width: 800px;
         }
         .image-wrapper {
-            background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
-            padding: 20px; /* Add some padding around the image */
-            display: inline-block; /* Make the div fit the content */
-            border-radius: 10px; /* Optional: Add rounded corners */
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            display: inline-block;
+            border-radius: 10px;
         }
-        .container img {
-            max-width: 100%; /* Ensure the image fits within the container */
-            height: auto; /* Maintain aspect ratio */
-            margin-bottom: 20px;
+        .image-wrapper video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
         }
         .container h1 {
             font-size: 3em;
-            color: #fff; /* Set "Coming Soon" text color to white for better contrast */
+            color: #fff;
             margin-bottom: 20px;
         }
         .container p {
@@ -59,57 +59,46 @@
             margin-top: 10px;
         }
         .container a img {
-            width: 50px; /* Increase the size of the icons */
-            height: auto; /* Maintain aspect ratio */
-            vertical-align: middle; /* Align the image vertically with text, if any */
-            outline: none; /* Remove the blue focus box */
-            z-index: 100; /* Bring the icons to the front */
-            position: relative; /* Ensure the z-index takes effect */
-            background-color: rgba(255, 255, 255, 0.8); /* Add a light background color */
-            border-radius: 0; /* Remove the circular effect */
-            padding: 0; /* Add some padding around the icon */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow effect */
-            margin: 10px; /* Add space between icons */
-            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+            width: 50px;
+            height: auto;
+            margin: 10px;
+            transition: transform 0.3s ease;
         }
         .container a img:hover {
-            transform: scale(1.1); /* Slightly enlarge the icon on hover */
-        }  
+            transform: scale(1.1);
+        }
         .container .email {
             font-size: 1.2em;
             margin-top: 20px;
             color: #fff;
         }
         .container .pdf-link {
-            background-color: #000000; /* Black color for the PDF link button */
-            margin-top: 20px; /* Add space between the button and social links */
+            background-color: #000000;
+            margin-top: 20px;
         }
         .container .pdf-link:hover {
-            background-color: #C73500; /* Darker color on hover */
+            background-color: #C73500;
         }
-
-        /* Media Query for Mobile Devices */
         @media (max-width: 600px) {
             .container {
-                width: 90%; /* Increase container width to utilize more space on mobile */
+                width: 90%;
             }
             .container h1 {
-                font-size: 2em; /* Slightly smaller heading for mobile */
+                font-size: 2em;
             }
             .container p {
-                font-size: 1em; /* Smaller paragraph text for mobile */
-                margin-bottom: 15px;
+                font-size: 1em;
             }
             .container a {
-                font-size: 0.9em; /* Adjust button text size for mobile */
-                padding: 8px 10px; /* Adjust button padding for mobile */
+                font-size: 0.9em;
+                padding: 8px 10px;
             }
             .container a img {
-                width: 35px; /* Smaller icon size on mobile */
-                margin: 5px; /* Adjust spacing for mobile */
+                width: 35px;
+                margin: 5px;
             }
             .container .pdf-link {
-                padding: 8px 10px; /* Adjust button padding on mobile */
+                padding: 8px 10px;
             }
         }
     </style>
@@ -118,28 +107,26 @@
 
 <div class="container">
     <div class="image-wrapper">
-        <img src="full-removebg-preview.png" alt="AdvisorDefense Logo">
+        <video autoplay loop muted playsinline>
+            <source src="logo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
     <p>Download our brochure below to learn more about our offering and feel free to connect with us by email.</p>
-    <p class="email"> <a href="mailto:sales@advisordefense.com">Sales@AdvisorDefense.com</a></p>
-        
-    <!-- Social Media Icons -->
+    <p class="email"><a href="mailto:sales@advisordefense.com">Sales@AdvisorDefense.com</a></p>
+
     <a href="https://www.linkedin.com/company/advisordefense/" target="_blank">
         <img src="linkedin.png" alt="LinkedIn">
     </a>
-
     <a href="https://www.facebook.com/AdvisorDefense/" target="_blank">
         <img src="facebook.png" alt="Facebook">
     </a>
-
     <a href="https://x.com/AdvisorDefense" target="_blank">
         <img src="x.png" alt="X">
     </a>
-
     <a href="https://www.tiktok.com/@advisordefense?lang=en" target="_blank">
         <img src="tiktok.png" alt="TikTok">
     </a>
-
     <a href="https://www.youtube.com/@AdvisorDefense" target="_blank">
         <img src="youtube.png" alt="YouTube">
     </a>
