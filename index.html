@@ -45,15 +45,25 @@
             font-size: 1.2em;
             margin-bottom: 30px;
         }
-        .container a img {
+        .icon-container {
+            background-color: #fff; /* White background for the icons */
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px; /* Space between icons and the brochure button */
+            display: flex;
+            justify-content: center;
+            gap: 15px; /* Spacing between icons */
+            flex-wrap: wrap; /* Allow icons to wrap on smaller screens */
+        }
+        .icon-container a img {
             width: 50px;
             height: auto;
             margin: 10px;
             transition: transform 0.3s ease;
-            border: 2px solid white; /* Add white border */
+            border: 2px solid #000; /* Black border for contrast against white */
             border-radius: 5px; /* Slightly rounded corners */
         }
-        .container a img:hover {
+        .icon-container a img:hover {
             transform: scale(1.1);
         }
         .container .email {
@@ -68,7 +78,6 @@
             padding: 10px 20px; /* Padding for the button */
             text-align: center;
             display: inline-block;
-            margin-top: 20px;
             font-size: 1.1em; /* Adjust font size */
             border-radius: 5px; /* Optional: Rounded corners */
             text-decoration: none; /* Remove underline */
@@ -92,7 +101,7 @@
                 font-size: 0.9em;
                 padding: 8px 10px;
             }
-            .container a img {
+            .icon-container a img {
                 width: 35px;
                 margin: 5px;
             }
@@ -114,22 +123,26 @@
     <p>Download our brochure below to learn more about our offering and feel free to connect with us by email.</p>
     <p class="email"><a href="mailto:sales@advisordefense.com">Sales@AdvisorDefense.com</a></p>
 
-    <a href="https://www.linkedin.com/company/advisordefense/" target="_blank">
-        <img src="linkedin.png" alt="LinkedIn">
-    </a>
-    <a href="https://www.facebook.com/AdvisorDefense/" target="_blank">
-        <img src="facebook.png" alt="Facebook">
-    </a>
-    <a href="https://x.com/AdvisorDefense" target="_blank">
-        <img src="x.png" alt="X">
-    </a>
-    <a href="https://www.tiktok.com/@advisordefense?lang=en" target="_blank">
-        <img src="tiktok.png" alt="TikTok">
-    </a>
-    <a href="https://www.youtube.com/@AdvisorDefense" target="_blank">
-        <img src="youtube.png" alt="YouTube">
-    </a>
+    <!-- Icon Container -->
+    <div class="icon-container">
+        <a href="https://www.linkedin.com/company/advisordefense/" target="_blank">
+            <img src="linkedin.png" alt="LinkedIn">
+        </a>
+        <a href="https://www.facebook.com/AdvisorDefense/" target="_blank">
+            <img src="facebook.png" alt="Facebook">
+        </a>
+        <a href="https://x.com/AdvisorDefense" target="_blank">
+            <img src="x.png" alt="X">
+        </a>
+        <a href="https://www.tiktok.com/@advisordefense?lang=en" target="_blank">
+            <img src="tiktok.png" alt="TikTok">
+        </a>
+        <a href="https://www.youtube.com/@AdvisorDefense" target="_blank">
+            <img src="youtube.png" alt="YouTube">
+        </a>
+    </div>
 
+    <!-- Brochure Button -->
     <a href="https://drive.google.com/file/d/1nTtHojgg-_2tsMZ571lX6T-9S9G1g9za/view?usp=sharing" target="_blank" class="pdf-link">AdvisorDefense Brochure</a>
 </div>
 
