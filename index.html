@@ -19,6 +19,7 @@
             background-repeat: no-repeat;
             color: #fff;
         }
+
         .container {
             position: relative;
             text-align: center;
@@ -28,44 +29,58 @@
             width: 80%;
             max-width: 800px;
         }
+
         .image-wrapper {
             background-color: rgba(0, 0, 0, 0.5);
             padding: 20px;
             display: inline-block;
             border-radius: 10px;
         }
+
         .image-wrapper video {
             max-width: 100%;
             height: auto;
             border-radius: 10px;
         }
+
         .client-portal {
-            margin-top: 20px;
+            margin-top: 30px;
         }
+
         .client-portal a {
             display: inline-block;
-            background-color: #C73500;
-            color: white;
-            padding: 12px 20px;
+            margin: 0 10px;
+            padding: 14px 26px;
+            font-size: 1.1em;
+            font-family: 'Courier New', Courier, monospace;
+            text-transform: uppercase;
             text-decoration: none;
-            font-size: 1.2em;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            margin: 0 5px;
+            color: #00FF00;
+            background-color: rgba(0, 0, 0, 0.8);
+            border: 1px solid #00FF00;
+            border-radius: 6px;
+            box-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00 inset;
+            transition: all 0.3s ease-in-out;
         }
+
         .client-portal a:hover {
-            background-color: #A02A00;
+            color: #000;
+            background-color: #00FF00;
+            box-shadow: 0 0 20px #00FF00, 0 0 30px #00FF00 inset;
+            transform: scale(1.05);
         }
+
         .container h1 {
             font-size: 3em;
             color: #fff;
             margin-bottom: 20px;
         }
+
         .container p {
             font-size: 1.2em;
             margin-bottom: 30px;
         }
+
         .container a {
             color: white;
             padding: 10px 20px;
@@ -76,20 +91,24 @@
             display: inline-block;
             margin-top: 10px;
         }
+
         .container a img {
             width: 50px;
             height: auto;
             margin: 10px;
             transition: transform 0.3s ease;
         }
+
         .container a img:hover {
             transform: scale(1.1);
         }
+
         .container .email {
             font-size: 1.2em;
             margin-top: 20px;
             color: #fff;
         }
+
         @media (max-width: 600px) {
             .container {
                 width: 90%;
