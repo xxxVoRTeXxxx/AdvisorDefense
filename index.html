@@ -5,165 +5,184 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AdvisorDefense</title>
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <meta name="description" content="AdvisorDefense is a cybersecurity consulting firm built for RIAs, providing expert security, compliance, and resilience services.">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self';">
+
   <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-image: url('background.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            color: #fff;
-        }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #fff;
+      animation: fadeIn 1.5s ease-in;
+    }
 
-        .container {
-            position: relative;
-            text-align: center;
-            padding: 20px;
-            background-color: transparent;
-            border-radius: 10px;
-            width: 80%;
-            max-width: 800px;
-        }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
 
-        .image-wrapper {
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            display: inline-block;
-            border-radius: 10px;
-        }
+    .container {
+      position: relative;
+      text-align: center;
+      padding: 20px;
+      background-color: transparent;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 800px;
+    }
 
-        .image-wrapper video {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
+    .image-wrapper {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      display: inline-block;
+      border-radius: 10px;
+    }
 
-        .client-portal {
-            margin-top: 30px;
-        }
+    .image-wrapper video {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
 
-        .client-portal a {
-            display: inline-block;
-            margin: 0 10px;
-            padding: 14px 26px;
-            font-size: 1.1em;
-            font-family: 'Courier New', Courier, monospace;
-            text-transform: uppercase;
-            text-decoration: none;
-            color: #00FF00;
-            background-color: rgba(0, 0, 0, 0.8);
-            border: 1px solid #00FF00;
-            border-radius: 6px;
-            box-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00 inset;
-            transition: all 0.3s ease-in-out;
-        }
+    .client-portal {
+      margin-top: 30px;
+    }
 
-        .client-portal a:hover {
-            color: #000;
-            background-color: #00FF00;
-            box-shadow: 0 0 20px #00FF00, 0 0 30px #00FF00 inset;
-            transform: scale(1.05);
-        }
+    .client-portal a {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 14px 26px;
+      font-size: 1.1em;
+      font-family: 'Courier New', Courier, monospace;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #00FF00;
+      background-color: rgba(0, 0, 0, 0.8);
+      border: 1px solid #00FF00;
+      border-radius: 6px;
+      box-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00 inset;
+      transition: all 0.3s ease-in-out;
+    }
 
-        .container h1 {
-            font-size: 3em;
-            color: #fff;
-            margin-bottom: 20px;
-        }
+    .client-portal a:hover {
+      color: #000;
+      background-color: #00FF00;
+      box-shadow: 0 0 20px #00FF00, 0 0 30px #00FF00 inset;
+      transform: scale(1.05);
+    }
 
-        .container p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-        }
+    .container h1 {
+      font-size: 3em;
+      color: #fff;
+      margin-bottom: 20px;
+    }
 
-        .container a {
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-size: 1.1em;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            display: inline-block;
-            margin-top: 10px;
-        }
+    .container p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
 
-        .container a img {
-            width: 50px;
-            height: auto;
-            margin: 10px;
-            transition: transform 0.3s ease;
-        }
+    .container a {
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 1.1em;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+      margin-top: 10px;
+    }
 
-        .container a img:hover {
-            transform: scale(1.1);
-        }
+    .container a img {
+      width: 50px;
+      height: auto;
+      margin: 10px;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
 
-        .container .email {
-            font-size: 1.2em;
-            margin-top: 20px;
-            color: #fff;
-        }
+    .container a img:hover {
+      transform: scale(1.1);
+      filter: drop-shadow(0 0 6px #00ff00);
+    }
 
-        @media (max-width: 600px) {
-            .container {
-                width: 90%;
-            }
-            .container h1 {
-                font-size: 2em;
-            }
-            .container p {
-                font-size: 1em;
-            }
-            .container a {
-                font-size: 0.9em;
-                padding: 8px 10px;
-            }
-            .container a img {
-                width: 35px;
-                margin: 5px;
-            }
-        }
-    </style>
+    .container .email {
+      font-size: 1.2em;
+      margin-top: 20px;
+      color: #fff;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: 90%;
+      }
+      .container h1 {
+        font-size: 2em;
+      }
+      .container p {
+        font-size: 1em;
+      }
+      .client-portal a {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+      }
+      .container a {
+        font-size: 0.9em;
+        padding: 8px 10px;
+      }
+      .container a img {
+        width: 35px;
+        margin: 5px;
+      }
+    }
+  </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="image-wrapper">
-        <video autoplay loop muted playsinline>
-            <source src="logo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
+  <div class="image-wrapper">
+    <video autoplay loop muted playsinline>
+      <source src="logo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
 
-    <div class="client-portal">
-        <a href="https://app.advisorcloud360.com/AdvisorDefense/s/" target="_blank">Client Portal</a>
-        <a href="about.html" target="_blank">About Us</a>
-        <a href="alerts.html" target="_blank">Cybersecurity Alerts</a>
-    </div>
+  <div class="client-portal" aria-label="Main navigation">
+    <a href="https://app.advisorcloud360.com/AdvisorDefense/s/" target="_blank">Client Portal</a>
+    <a href="about.html" target="_blank">About Us</a>
+    <a href="alerts.html" target="_blank">Cybersecurity Alerts</a>
+  </div>
 
-    <p class="email"><a href="mailto:sales@advisordefense.com">Sales@AdvisorDefense.com</a></p>
+  <p class="email">
+    <a href="mailto:sales@advisordefense.com">Sales@AdvisorDefense.com</a>
+  </p>
 
-    <a href="https://www.linkedin.com/company/advisordefense/" target="_blank">
-        <img src="linkedin2.png" alt="LinkedIn">
-    </a>
-    <a href="https://www.facebook.com/AdvisorDefense/" target="_blank">
-        <img src="facebook2.png" alt="Facebook">
-    </a>
-    <a href="https://x.com/AdvisorDefense" target="_blank">
-        <img src="twitter2.png" alt="X">
-    </a>
-    <a href="https://www.tiktok.com/@advisordefense?lang=en" target="_blank">
-        <img src="tiktok2.png" alt="TikTok">
-    </a>
-    <a href="https://www.youtube.com/@AdvisorDefense" target="_blank">
-        <img src="youtube2.png" alt="YouTube">
-    </a>
+  <a href="https://www.linkedin.com/company/advisordefense/" target="_blank">
+    <img src="linkedin2.png" alt="Follow AdvisorDefense on LinkedIn" loading="lazy">
+  </a>
+  <a href="https://www.facebook.com/AdvisorDefense/" target="_blank">
+    <img src="facebook2.png" alt="Follow AdvisorDefense on Facebook" loading="lazy">
+  </a>
+  <a href="https://x.com/AdvisorDefense" target="_blank">
+    <img src="twitter2.png" alt="Follow AdvisorDefense on X" loading="lazy">
+  </a>
+  <a href="https://www.tiktok.com/@advisordefense?lang=en" target="_blank">
+    <img src="tiktok2.png" alt="Follow AdvisorDefense on TikTok" loading="lazy">
+  </a>
+  <a href="https://www.youtube.com/@AdvisorDefense" target="_blank">
+    <img src="youtube2.png" alt="Follow AdvisorDefense on YouTube" loading="lazy">
+  </a>
 </div>
 
 </body>
