@@ -44,76 +44,96 @@
     <div class="p-1 rounded">
       <img src="full-removebg-preview.png" alt="AdvisorDefense Logo" class="h-14">
     </div>
-    <ul class="flex space-x-6 text-sm">
-      <li><a href="#home"       class="nav-link hover:text-primary">Home</a></li>
-      <li><a href="#about"      class="nav-link hover:text-primary">About Us</a></li>
-      <li><a href="#services"   class="nav-link hover:text-primary">Services</a></li>
-      <li><a href="#compliance" class="nav-link hover:text-primary">Compliance</a></li>
-      <li><a href="#comparison" class="nav-link hover:text-primary">Comparison</a></li>
-      <li><a href="#alerts"     class="nav-link hover:text-primary">Cybersecurity Alerts</a></li>
-      <li><a href="#portal"     class="nav-link hover:text-primary">Client Portal</a></li>
-      <li><a href="#contact"    class="nav-link hover:text-primary">Contact</a></li>
-    </ul>
+    <div class="md:flex md:space-x-6 text-sm hidden md:block">
+      <ul class="flex space-x-6 text-sm">
+        <li><a href="#home" class="nav-link hover:text-primary">Home</a></li>
+        <li><a href="#about" class="nav-link hover:text-primary">About Us</a></li>
+        <li><a href="#services" class="nav-link hover:text-primary">Services</a></li>
+        <li><a href="#compliance" class="nav-link hover:text-primary">Compliance</a></li>
+        <li><a href="#comparison" class="nav-link hover:text-primary">Comparison</a></li>
+        <li><a href="#alerts" class="nav-link hover:text-primary">Cybersecurity Alerts</a></li>
+        <li><a href="#portal" class="nav-link hover:text-primary">Client Portal</a></li>
+        <li><a href="#contact" class="nav-link hover:text-primary">Contact</a></li>
+      </ul>
+    </div>
+    <div class="md:hidden">
+      <button id="menu-toggle" class="text-2xl focus:outline-none">☰</button>
+      <ul id="mobile-menu" class="hidden absolute bg-white p-4 shadow-lg right-0 mt-2 space-y-2">
+        <li><a href="#home" class="nav-link block hover:text-primary">Home</a></li>
+        <li><a href="#about" class="nav-link block hover:text-primary">About Us</a></li>
+        <li><a href="#services" class="nav-link block hover:text-primary">Services</a></li>
+        <li><a href="#compliance" class="nav-link block hover:text-primary">Compliance</a></li>
+        <li><a href="#comparison" class="nav-link block hover:text-primary">Comparison</a></li>
+        <li><a href="#alerts" class="nav-link block hover:text-primary">Cybersecurity Alerts</a></li>
+        <li><a href="#portal" class="nav-link block hover:text-primary">Client Portal</a></li>
+        <li><a href="#contact" class="nav-link block hover:text-primary">Contact</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
+<script>
+  document.getElementById('menu-toggle').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+</script>
 
 <!-- Hero Section -->
 <section id="home" class="relative bg-gradient-to-r from-gray-900 to-blue-900 text-white py-24 md:py-32">
     <div class="container mx-auto max-w-7xl text-center px-4 sm:px-6 lg:px-8 relative z-10">
-        <h1 class="text-5xl sm:text-6xl md:text-7xl font-semibold mb-4 tracking-tight animate-fade-in-down">AdvisorDefense</h1>
+        <h1 class="text-4xl sm:text-5xl md:text-7xl font-semibold mb-4 tracking-tight animate-fade-in-down">AdvisorDefense</h1>
         <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold mb-6 opacity-90 animate-fade-in-down delay-200">The Premier Cybersecurity Solution for RIAs</h2>
         <p class="text-lg sm:text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-down delay-400">AdvisorDefense provides cybersecurity solutions to safeguard Registered Investment Advisors and their clients.</p>
         <a href="#contact" class="inline-block bg-blue-600 text-white px-8 py-4 text-lg font-medium rounded-full hover:bg-blue-700 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 animate-fade-in-up delay-600">Get Started</a>
     </div>
 </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-16 bg-white">
-        <div class="container mx-auto max-w-7xl px-4">
-            <h2 class="text-3xl font-bold text-center mb-8 primary-text">Our Mission</h2>
-            <p class="text-lg text-center max-w-3xl mx-auto">AdvisorDefense is committed to being the vanguard of cybersecurity excellence, ensuring that RIAs, regardless of size, receive unparalleled protection. We provide the tools, expertise, and strategies needed to navigate the costantly evolving landscape of cyber risks and industry regulations. In collaboration with our affiliate, <a href="https://advisorassist.com/" target="_blank" rel="noopener noreferrer" class="accent-text hover:underline">AdvisorAssist</a>, a leading RIA compliance and risk management consulting firm, we deliver fully integrated compliance and cybersecurity solutions.</p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                <div class="text-center p-6 bg-gray-50 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-2 primary-text">Tailored Approach</h3>
-                    <p>We customize our services to address your unique vulnerabilities, ensuring targeted and relevant cybersecurity solutions.</p>
-                </div>
-                <div class="text-center p-6 bg-gray-50 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-2 primary-text">Expertise</h3>
-                    <p>Our team of cybersecurity veterans brings decades of experience to deliver trusted insights.</p>
-                </div>
-                <div class="text-center p-6 bg-gray-50 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-2 primary-text">Innovation</h3>
-                    <p>We embrace cutting-edge technologies to provide the most effective solutions.</p>
-                </div>
+<!-- About Section -->
+<section id="about" class="py-16 bg-white">
+    <div class="container mx-auto max-w-7xl px-4">
+        <h2 class="text-3xl font-bold text-center mb-8 primary-text">Our Mission</h2>
+        <p class="text-lg text-center max-w-3xl mx-auto">AdvisorDefense is committed to being the vanguard of cybersecurity excellence, ensuring that RIAs, regardless of size, receive unparalleled protection. We provide the tools, expertise, and strategies needed to navigate the constantly evolving landscape of cyber risks and industry regulations. In collaboration with our affiliate, <a href="https://advisorassist.com/" target="_blank" rel="noopener noreferrer" class="accent-text hover:underline">AdvisorAssist</a>, a leading RIA compliance and risk management consulting firm, we deliver fully integrated compliance and cybersecurity solutions.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+            <div class="text-center p-6 bg-gray-50 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-2 primary-text">Tailored Approach</h3>
+                <p>We customize our services to address your unique vulnerabilities, ensuring targeted and relevant cybersecurity solutions.</p>
+            </div>
+            <div class="text-center p-6 bg-gray-50 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-2 primary-text">Expertise</h3>
+                <p>Our team of cybersecurity veterans brings decades of experience to deliver trusted insights.</p>
+            </div>
+            <div class="text-center p-6 bg-gray-50 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-2 primary-text">Innovation</h3>
+                <p>We embrace cutting-edge technologies to provide the most effective solutions.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-16 bg-gray-100">
-        <div class="container mx-auto max-w-7xl px-4">
-            <h2 class="text-3xl font-bold text-center mb-8 primary-text">Our Services</h2>
-            <ul class="list-disc list-inside max-w-3xl mx-auto text-lg space-y-2">
-                <li>Cybersecurity Risk Assessments</li>
-                <li>Policies and Procedures Creation & Review</li>
-                <li>Regulatory & Cybersecurity Alerts</li>
-                <li>Vendor Risk Management</li>
-                <li>Cybersecurity Gap Analysis</li>
-                <li>Ongoing Strategy Calls</li>
-                <li>Microsoft 365 & Google Workspace Technical Assessments</li>
-                <li>Regulatory Exam Support</li>
-                <li>Breach Response & Remediation Guidance</li>
-                <li>Mock Incident Response Exercises</li>
-                <li>Ongoing Managed Service Provider (MSP) Oversight</li>
-                <li>Cybersecurity Awareness Training</li>
-                <li>24/7 Managed Detection and Response (MDR)</li>
-                <li>Penetration Testing - Network, Wireless, and Web Application</li>
-                <li>Cybersecurity Regulatory Exam Mock Audits</li>
-            </ul>
-        </div>
-    </section>
+<!-- Services Section -->
+<section id="services" class="py-16 bg-gray-100">
+    <div class="container mx-auto max-w-7xl px-4">
+        <h2 class="text-3xl font-bold text-center mb-8 primary-text">Our Services</h2>
+        <ul class="list-disc list-inside max-w-3xl mx-auto text-lg space-y-2">
+            <li>Cybersecurity Risk Assessments</li>
+            <li>Policies and Procedures Creation & Review</li>
+            <li>Regulatory & Cybersecurity Alerts</li>
+            <li>Vendor Risk Management</li>
+            <li>Cybersecurity Gap Analysis</li>
+            <li>Ongoing Strategy Calls</li>
+            <li>Microsoft 365 & Google Workspace Technical Assessments</li>
+            <li>Regulatory Exam Support</li>
+            <li>Breach Response & Remediation Guidance</li>
+            <li>Mock Incident Response Exercises</li>
+            <li>Ongoing Managed Service Provider (MSP) Oversight</li>
+            <li>Cybersecurity Awareness Training</li>
+            <li>24/7 Managed Detection and Response (MDR)</li>
+            <li>Penetration Testing - Network, Wireless, and Web Application</li>
+            <li>Cybersecurity Regulatory Exam Mock Audits</li>
+        </ul>
+    </div>
+</section>
 
-    <!-- Trusted by Leading RIAs Section -->
+<!-- Trusted by Leading RIAs Section -->
 <section id="trusted-rias" class="py-16 bg-white">
     <div class="container mx-auto max-w-7xl px-4 text-center">
         <h2 class="text-3xl font-bold mb-8 primary-text">Trusted by Leading RIAs</h2>
@@ -132,8 +152,8 @@
     </div>
 </section>
 
-    <!-- Leader Section -->
-<section id="about" class="py-16 bg-white">
+<!-- Leader Section -->
+<section id="leader" class="py-16 bg-white">
     <div class="container mx-auto max-w-7xl px-4">
         <h2 class="text-3xl font-bold text-center mb-8 primary-text">About Our Leadership</h2>
         <div class="flex flex-col md:flex-row items-center gap-8">
@@ -142,63 +162,63 @@
             </div>
             <div class="md:w-2/3">
                 <h3 class="text-2xl font-semibold mb-4 primary-text">Philip Coniglio, President & CEO</h3>
-                <p class="text-lg leading-relaxed">Philip Coniglio is the founder and CEO of AdvisorDefense. With over two decades of experience, Philip has held senior leadership roles at prominent financial institutions. He currently serves as Chief Information Security Officer for AdvisorAssist and sits on the board of Archive Intel, an AI-powered client communication archiving, record keeping, and compliance software platform. Previously, he was the Chief Information Security Officer and Chief Technology Officer of Private Advisor Group, where he led enterprise-wide technology and cybersecurity strategy for one of the country’s largest RIA networks. Before that, Philip spent over a decade at International Value Advisers as Chief Information Security Officer and Director of Fund Operations, where he helped scale the firm’s infrastructure as it grew from $100M to $20B in AUM. His earlier career includes serving as Director of Investment Products & Managed Accounts at Morgan Stanley, overseeing over $500 billion in assets. Across every role, Philip has demonstrated a commitment to building practical, scalable, and secure solutions aligned with regulatory expectations and business growth.</p>
+                <p class="text-base md:text-lg leading-relaxed">Philip Coniglio is the founder and CEO of AdvisorDefense. With over two decades of experience, Philip has held senior leadership roles at prominent financial institutions. He currently serves as Chief Information Security Officer for AdvisorAssist and sits on the board of Archive Intel, an AI-powered client communication archiving, record keeping, and compliance software platform. Previously, he was the Chief Information Security Officer and Chief Technology Officer of Private Advisor Group, where he led enterprise-wide technology and cybersecurity strategy for one of the country’s largest RIA networks. Before that, Philip spent over a decade at International Value Advisers as Chief Information Security Officer and Director of Fund Operations, where he helped scale the firm’s infrastructure as it grew from $100M to $20B in AUM. His earlier career includes serving as Director of Investment Products & Managed Accounts at Morgan Stanley, overseeing over $500 billion in assets. Across every role, Philip has demonstrated a commitment to building practical, scalable, and secure solutions aligned with regulatory expectations and business growth.</p>
             </div>
         </div>
     </div>
 </section>
 
-    <!-- Compliance Section -->
-    <section id="compliance" class="py-16 bg-white">
-        <div class="container mx-auto max-w-7xl px-4">
-            <h2 class="text-3xl font-bold text-center mb-8 primary-text">SEC Regulation S-P Compliance</h2>
-            <p class="text-lg text-center max-w-3xl mx-auto mb-6">On May 15, 2024, the SEC adopted amendments to Regulation S-P, requiring RIAs to enhance policies for safeguarding client information. AdvisorDefense helps you comply with these mandates.</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="p-6 bg-gray-50 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-2 primary-text">Incident Response Program</h3>
-                    <p>Our solutions help you detect, respond to, and recover from unauthorized access to client data, with policies for assessment, containment, and client notification within 30 days.</p>
-                </div>
-                <div class="p-6 bg-gray-50 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-2 primary-text">Service Provider Oversight</h3>
-                    <p>We ensure your service providers have robust controls, with due diligence and monitoring to protect client information, including notifications within 72 hours of a breach.</p>
-                </div>
+<!-- Compliance Section -->
+<section id="compliance" class="py-16 bg-white">
+    <div class="container mx-auto max-w-7xl px-4">
+        <h2 class="text-3xl font-bold text-center mb-8 primary-text">SEC Regulation S-P Compliance</h2>
+        <p class="text-lg text-center max-w-3xl mx-auto mb-6">On May 15, 2024, the SEC adopted amendments to Regulation S-P, requiring RIAs to enhance policies for safeguarding client information. AdvisorDefense helps you comply with these mandates.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="p-6 bg-gray-50 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-2 primary-text">Incident Response Program</h3>
+                <p>Our solutions help you detect, respond to, and recover from unauthorized access to client data, with policies for assessment, containment, and client notification within 30 days.</p>
+            </div>
+            <div class="p-6 bg-gray-50 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-2 primary-text">Service Provider Oversight</h3>
+                <p>We ensure your service providers have robust controls, with due diligence and monitoring to protect client information, including notifications within 72 hours of a breach.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Service Comparison Section -->
-    <section id="comparison" class="py-16 bg-gray-100">
-        <div class="container mx-auto max-w-7xl px-4">
-            <h2 class="text-3xl font-bold text-center mb-8 primary-text">Service Comparison</h2>
-            <p class="text-lg text-center max-w-3xl mx-auto mb-6">AdvisorDefense offers tailored cybersecurity and compliance solutions at different levels to meet your needs.</p>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="border p-6 rounded-lg shadow-md bg-white">
-                    <h3 class="text-xl font-semibold mb-2 primary-text">Essentials</h3>
-                    <ul class="list-none list-inside text-lg space-y-2">
-                        <li>Tailored for smaller RIAs with up to 10 supervised persons. This tier offers foundational cybersecurity support with a set number of hours.</li>
-                    </ul>
-                </div>
-                <div class="border p-6 rounded-lg shadow-md bg-blue-50">
-                    <h3 class="text-xl font-semibold mb-2 primary-text">Advantage</h3>
-                    <ul class="list-none list-inside text-lg space-y-2">
-                        <li>Designed for mid-sized RIAs with 10 to 25 supervised persons. This tier builds on Essentials, providing additional hours of support to handle more complex requirements.</li>
-                    </ul>
-                </div>
-                <div class="border p-6 rounded-lg shadow-md bg-white">
-                    <h3 class="text-xl font-semibold mb-2 primary-text">Advantage Plus</h3>
-                    <ul class="list-none list-inside text-lg space-y-2">
-                        <li>Geared toward larger RIAs with over 25 supervised persons. This tier includes all benefits of Advantage with significantly more hours, enabling comprehensive protection for larger, more complex operations.</li>
-                    </ul>
-                </div>
-                <div class="border p-6 rounded-lg shadow-md bg-gray-50">
-                    <h3 class="text-xl font-semibold mb-2 primary-text">Vendor Risk Management Only</h3>
-                    <ul class="list-none list-inside text-lg space-y-2">
-                        <li>Focused solution for overseeing service providers, including due diligence and access to our library of over 200 reports.</li>
-                    </ul>
-                </div>
+<!-- Service Comparison Section -->
+<section id="comparison" class="py-16 bg-gray-100">
+    <div class="container mx-auto max-w-7xl px-4">
+        <h2 class="text-3xl font-bold text-center mb-8 primary-text">Service Comparison</h2>
+        <p class="text-lg text-center max-w-3xl mx-auto mb-6">AdvisorDefense offers tailored cybersecurity and compliance solutions at different levels to meet your needs.</p>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="border p-6 rounded-lg shadow-md bg-white">
+                <h3 class="text-xl font-semibold mb-2 primary-text">Essentials</h3>
+                <ul class="list-none list-inside text-lg space-y-2">
+                    <li>Tailored for smaller RIAs with up to 10 supervised persons. This tier offers foundational cybersecurity support with a set number of hours.</li>
+                </ul>
+            </div>
+            <div class="border p-6 rounded-lg shadow-md bg-blue-50">
+                <h3 class="text-xl font-semibold mb-2 primary-text">Advantage</h3>
+                <ul class="list-none list-inside text-lg space-y-2">
+                    <li>Designed for mid-sized RIAs with 10 to 25 supervised persons. This tier builds on Essentials, providing additional hours of support to handle more complex requirements.</li>
+                </ul>
+            </div>
+            <div class="border p-6 rounded-lg shadow-md bg-white">
+                <h3 class="text-xl font-semibold mb-2 primary-text">Advantage Plus</h3>
+                <ul class="list-none list-inside text-lg space-y-2">
+                    <li>Geared toward larger RIAs with over 25 supervised persons. This tier includes all benefits of Advantage with significantly more hours, enabling comprehensive protection for larger, more complex operations.</li>
+                </ul>
+            </div>
+            <div class="border p-6 rounded-lg shadow-md bg-gray-50">
+                <h3 class="text-xl font-semibold mb-2 primary-text">Vendor Risk Management Only</h3>
+                <ul class="list-none list-inside text-lg space-y-2">
+                    <li>Focused solution for overseeing service providers, including due diligence and access to our library of over 200 reports.</li>
+                </ul>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 <!-- Cybersecurity Alerts Section -->
 <section id="alerts" class="py-16 bg-white">
@@ -209,7 +229,7 @@
                 <iframe 
                     src="https://widgets.sociablekit.com/linkedin-page-posts/iframe/25534444" 
                     scrolling="yes"
-                    class="w-full h-[800px] border-0"
+                    class="w-full h-[400px] sm:h-[600px] md:h-[800px] border-0"
                     frameborder="0"
                     allowfullscreen>
                 </iframe>
@@ -218,49 +238,48 @@
     </div>
 </section>
 
-    <!-- Client Portal Section -->
-    <section id="portal" class="py-16 bg-gray-100">
-        <div class="container mx-auto max-w-7xl px-4 text-center">
-            <h2 class="text-3xl font-bold mb-8 primary-text">Client Portal</h2>
-            <p class="text-lg max-w-3xl mx-auto mb-6">Access your personalized cybersecurity dashboard, reports, and resources through our secure Client Portal.</p>
-            <a href="https://app.advisorcloud360.com/AdvisorDefense/s/" class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700" target="_blank" rel="noopener noreferrer">Client Portal</a>
-        </div>
-    </section>
+<!-- Client Portal Section -->
+<section id="portal" class="py-16 bg-gray-100">
+    <div class="container mx-auto max-w-7xl px-4 text-center">
+        <h2 class="text-3xl font-bold mb-8 primary-text">Client Portal</h2>
+        <p class="text-lg max-w-3xl mx-auto mb-6">Access your personalized cybersecurity dashboard, reports, and resources through our secure Client Portal.</p>
+        <a href="https://app.advisorcloud360.com/AdvisorDefense/s/" class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700" target="_blank" rel="noopener noreferrer">Client Portal</a>
+    </div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="primary-bg text-white py-16">
-        <div class="container mx-auto max-w-7xl px-4 text-center">
-            <h2 class="text-3xl font-bold mb-8">Contact Us</h2>
-            <p class="text-lg mb-4">Ready to secure your RIA? Reach out to AdvisorDefense.</p>
-            <p class="text-lg mb-2">Phone: (406) 686-3086</p>
-            <p class="text-lg mb-2">Email: <a href="mailto:sales@advisordefense.com" class="underline hover:accent-text">sales@advisordefense.com</a></p>
-            <p class="text-lg mb-2">892 Plain Street | Suite 10 | Marshfield, MA 02050</a></p>
-            <p class="text-sm mt-6">© AdvisorDefense, LLC. All rights reserved.</p>
-            <div class="max-w-md mx-auto mt-8"></div>
-            <div class="flex justify-center gap-6 mt-8">
-                <a href="https://www.linkedin.com/company/advisordefense/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-accent-text transition-colors duration-200">
-                    <i class="fab fa-linkedin-in text-2xl"></i>
-                    <span class="sr-only">Follow AdvisorDefense on LinkedIn</span>
-                </a>
-                <a href="https://www.facebook.com/AdvisorDefense/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-accent-text transition-colors duration-200">
-                    <i class="fab fa-facebook-f text-2xl"></i>
-                    <span class="sr-only">Follow AdvisorDefense on Facebook</span>
-                </a>
-                <a href="https://x.com/AdvisorDefense" target="_blank" rel="noopener noreferrer" class="text-white hover:text-accent-text transition-colors duration-200">
-                    <i class="fab fa-x-twitter text-2xl"></i>
-                    <span class="sr-only">Follow AdvisorDefense on X</span>
-                </a>
-                <a href="https://www.tiktok.com/@advisordefense?lang=en" target="_blank" rel="noopener noreferrer" class="text-white hover:text-accent-text transition-colors duration-200">
-                    <i class="fab fa-tiktok text-2xl"></i>
-                    <span class="sr-only">Follow AdvisorDefense on TikTok</span>
-                </a>
-                <a href="https://www.youtube.com/@AdvisorDefense" target="_blank" rel="noopener noreferrer" class="text-white hover:text-accent-text transition-colors duration-200">
-                    <i class="fab fa-youtube text-2xl"></i>
-                    <span class="sr-only">Follow AdvisorDefense on YouTube</span>
-                </a>
-            </div>
-            
+<!-- Contact Section -->
+<section id="contact" class="primary-bg text-white py-16">
+    <div class="container mx-auto max-w-7xl px-4 text-center">
+        <h2 class="text-3xl font-bold mb-8">Contact Us</h2>
+        <p class="text-lg mb-4">Ready to secure your RIA? Reach out to AdvisorDefense.</p>
+        <p class="text-lg mb-2">Phone: (406) 686-3086</p>
+        <p class="text-lg mb-2">Email: <a href="mailto:sales@advisordefense.com" class="underline hover:accent-text">sales@advisordefense.com</a></p>
+        <p class="text-lg mb-2">892 Plain Street | Suite 10 | Marshfield, MA 02050</p>
+        <p class="text-sm mt-6">© AdvisorDefense, LLC. All rights reserved.</p>
+        <div class="max-w-md mx-auto mt-8"></div>
+        <div class="flex justify-center gap-6 mt-8">
+            <a href="https://www.linkedin.com/company/advisordefense/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-accent-text transition-colors duration-200">
+                <i class="fab fa-linkedin-in text-2xl"></i>
+                <span class="sr-only">Follow AdvisorDefense on LinkedIn</span>
+            </a>
+            <a href="https://www.facebook.com/AdvisorDefense/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-accent-text transition-colors duration-200">
+                <i class="fab fa-facebook-f text-2xl"></i>
+                <span class="sr-only">Follow AdvisorDefense on Facebook</span>
+            </a>
+            <a href="https://x.com/AdvisorDefense" target="_blank" rel="noopener noreferrer" class="text-white hover:text-accent-text transition-colors duration-200">
+                <i class="fab fa-x-twitter text-2xl"></i>
+                <span class="sr-only">Follow AdvisorDefense on X</span>
+            </a>
+            <a href="https://www.tiktok.com/@advisordefense?lang=en" target="_blank" rel="noopener noreferrer" class="text-white hover:text-accent-text transition-colors duration-200">
+                <i class="fab fa-tiktok text-2xl"></i>
+                <span class="sr-only">Follow AdvisorDefense on TikTok</span>
+            </a>
+            <a href="https://www.youtube.com/@AdvisorDefense" target="_blank" rel="noopener noreferrer" class="text-white hover:text-accent-text transition-colors duration-200">
+                <i class="fab fa-youtube text-2xl"></i>
+                <span class="sr-only">Follow AdvisorDefense on YouTube</span>
+            </a>
         </div>
-    </section>
+    </div>
+</section>
 </body>
 </html>
