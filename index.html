@@ -81,7 +81,7 @@
             autoplay 
             muted 
             playsinline>
-            <source src="logo.mp4" type="video/mp4">
+            <source src="alt-logo.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
@@ -99,7 +99,7 @@
     document.addEventListener('DOMContentLoaded', function() {
         const video = document.getElementById('hero-video');
         // Set playback rate to 0.5 (half speed, adjustable between 0.5 and 1)
-        video.playbackRate = 0.5;
+        video.playbackRate = 0.25;
 
         // Pause when the video ends instead of looping
         video.onended = function() {
