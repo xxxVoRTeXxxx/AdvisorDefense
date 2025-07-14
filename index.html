@@ -76,12 +76,12 @@
 <section id="home" class="relative py-24 md:py-32 overflow-hidden">
     <div class="absolute inset-0 z-0">
         <video 
+            id="hero-video"
             class="w-full h-full object-cover opacity-20" 
             autoplay 
             muted 
-            loop 
             playsinline>
-            <source src="alt-logo.mp4" type="video/mp4">
+            <source src="logo.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
@@ -94,6 +94,19 @@
     <!-- Optional overlay to preserve gradient effect -->
     <div class="absolute inset-0 bg-gradient-to-r from-gray-900 to-blue-900 opacity-70 z-0"></div>
 </section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const video = document.getElementById('hero-video');
+        // Set playback rate to 0.5 (half speed, adjustable between 0.5 and 1)
+        video.playbackRate = 0.5;
+
+        // Pause when the video ends instead of looping
+        video.onended = function() {
+            video.pause();
+        };
+    });
+</script>
 
 <!-- About Section -->
 <section id="about" class="py-16 bg-white">
