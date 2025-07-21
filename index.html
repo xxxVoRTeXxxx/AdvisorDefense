@@ -154,6 +154,20 @@
     </div>
 </section>
 
+<!-- Add the marquee styles here -->
+  <style>
+    /* --- Trusted-By Marquee Styles --- */
+    .trusted-by{background:#f9fafb;padding:2rem 0;text-align:center}
+    .trusted-by h2{font-size:1.75rem;font-weight:600;margin-bottom:2rem}
+    .marquee{overflow:hidden;position:relative;width:100%}
+    .marquee-track{display:flex;width:max-content;animation:scroll 40s linear infinite}
+    .marquee-group{display:flex;gap:3rem;align-items:center}
+    .marquee-group img{height:50px;width:auto;object-fit:contain;filter:grayscale(100%);opacity:.75;transition:filter .3s,opacity .3s}
+    .marquee-group img:hover{filter:none;opacity:1}
+    @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  </style>
+</head>
+    
 <!-- Trusted by Section -->
 <section class="trusted-by">
   <h2>Trusted by Leading RIAs</h2>
