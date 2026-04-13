@@ -33,6 +33,35 @@
         .nav-link:hover {
             text-decoration: underline;
         }
+        /* Tools dropdown */
+        .nav-dropdown { position: relative; }
+        .nav-dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #fff;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+            min-width: 220px;
+            padding: 0.5rem 0;
+            z-index: 50;
+        }
+        .nav-dropdown:hover .nav-dropdown-menu,
+        .nav-dropdown:focus-within .nav-dropdown-menu { display: block; }
+        .nav-dropdown-menu a {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.6rem 1rem;
+            color: #1f2937;
+            font-size: 0.875rem;
+            white-space: nowrap;
+            transition: background 0.15s;
+        }
+        .nav-dropdown-menu a:hover { background: #f3f4f6; color: #003087; }
+        .nav-dropdown-menu a i { width: 1rem; text-align: center; color: #003087; }
         .primary-bg { background-color: #003087; }
         .primary-text { color: #003087; }
         .accent-text { color: #00A4E4; }
@@ -97,10 +126,23 @@
       <img src="full-removebg-preview.png" alt="AdvisorDefense Logo" class="h-14">
     </div>
     <div class="hidden md:flex md:space-x-6 text-sm">
-      <ul class="flex space-x-6 text-sm">
+      <ul class="flex space-x-6 text-sm items-center">
         <li><a href="#home" class="nav-link hover:text-primary">Home</a></li>
         <li><a href="#about" class="nav-link hover:text-primary">About Us</a></li>
         <li><a href="#services" class="nav-link hover:text-primary">Services</a></li>
+        <li class="nav-dropdown">
+          <button class="nav-link hover:text-primary flex items-center gap-1 focus:outline-none" aria-haspopup="true">
+            Tools <i class="fa-solid fa-chevron-down text-[10px] opacity-60"></i>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="https://analyzer.advisordefense.com" target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-envelope-open-text"></i> Email Threat Analyzer
+            </a>
+            <a href="https://ir-tabletop.onrender.com" target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-shield-halved"></i> IR Tabletop Exercise
+            </a>
+          </div>
+        </li>
         <li><a href="#compliance" class="nav-link hover:text-primary">Compliance</a></li>
         <li><a href="#comparison" class="nav-link hover:text-primary">Comparison</a></li>
         <li><a href="#alerts" class="nav-link hover:text-primary">Cybersecurity Alerts</a></li>
@@ -115,7 +157,12 @@
         <li><a href="#home" class="nav-link block hover:text-primary">Home</a></li>
         <li><a href="#about" class="nav-link block hover:text-primary">About Us</a></li>
         <li><a href="#services" class="nav-link block hover:text-primary">Services</a></li>
-        <li><a href="#compliance" class="nav-link block hover:text-primary">Compliance</a></li>
+        <li class="border-t border-gray-200 pt-2 mt-2">
+          <span class="block text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1 px-1">Tools</span>
+          <a href="https://analyzer.advisordefense.com" target="_blank" rel="noopener noreferrer" class="nav-link block hover:text-primary pl-3"><i class="fa-solid fa-envelope-open-text mr-2 text-primary"></i>Email Threat Analyzer</a>
+          <a href="https://ir-tabletop.onrender.com" target="_blank" rel="noopener noreferrer" class="nav-link block hover:text-primary pl-3"><i class="fa-solid fa-shield-halved mr-2 text-primary"></i>IR Tabletop Exercise</a>
+        </li>
+        <li class="border-t border-gray-200 pt-2 mt-2"><a href="#compliance" class="nav-link block hover:text-primary">Compliance</a></li>
         <li><a href="#comparison" class="nav-link block hover:text-primary">Comparison</a></li>
         <li><a href="#alerts" class="nav-link block hover:text-primary">Cybersecurity Alerts</a></li>
         <li><a href="#portal" class="nav-link block hover:text-primary">Client Portal</a></li>
